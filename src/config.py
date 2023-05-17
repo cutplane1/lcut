@@ -1,3 +1,4 @@
 import os
 
-database_file = os.path.join(os.getcwd(), "db.json")
+DATABASE_FILE = os.path.join(os.getcwd(), "db.json")
+URL = "127.0.0.1:5000"

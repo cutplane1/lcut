@@ -1,6 +1,9 @@
+import database, linkgen, config
+
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
+db = database.load(config.database_file)
 
 @app.route("/")
 def main_page():
@@ -8,4 +11,9 @@ def main_page():
 
 @app.route("/s", methods=['POST'])
 def save_page():
-    return request.form['link']
+    sym = linkgen.generate_random_symbols(8)
+
+    database.append(db, sym, request.form['link'])
+    database.write(config.database_file, db)
+
+    return config.URL + "/" + sym
