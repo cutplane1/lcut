@@ -1,12 +1,12 @@
 import json
 
-def load():
-    with open("db.json") as json_file:
+def load(file_link):
+    with open(file_link) as json_file:
         return json.load(json_file)
 
 
-def write(db):
-    with open("db.json", "w") as json_file:
+def write(file_link, db):
+    with open(file_link, "w") as json_file:
         json.dump(db, json_file, sort_keys=True, indent=2)
 
 
