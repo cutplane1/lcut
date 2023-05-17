@@ -1,8 +1,11 @@
-from flask import Flask
-from flask import render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 @app.route("/")
 def main_page():
-    return "<p>Hello, World!</p>"
+    return render_template('index.html')
+
+@app.route("/s", methods=['POST'])
+def save_page():
+    return request.form['link']
