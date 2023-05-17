@@ -1,9 +1,9 @@
-import database
+import database, linkgen
 
 db = database.load()
 
-database.search_link(db, "oneb")
+# database.search_link(db, "oneb")
 
-# database.append(db, "ttb", "ww.com")
+database.append(db, linkgen.generate_random_symbols(8), "ww.com")
 
 database.write(db)
