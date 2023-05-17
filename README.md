@@ -2,7 +2,7 @@
 
 Simple link shortener in python and flask.
 
-## Start app
+## Start App
 
 ```
 flask --app main run
