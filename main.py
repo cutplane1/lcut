@@ -10,18 +10,18 @@ def write(db):
         json.dump(db, json_file, sort_keys=True, indent=2)
 
 
-db = load()
-
-
-
-# def search_link(db, key):
-#     return db[key]
-
-
-# search_link(db, "oneb")
 def append(db, key, link):
     db[key] = link
 
-append(db, "ttb", "ntsft.com")
+
+def search_link(db, key):
+    return db[key]
+
+
+db = load()
+
+search_link(db, "oneb")
+
+append(db, "ttb", "ww.com")
 
 write(db)
