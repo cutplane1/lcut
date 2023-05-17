@@ -1,5 +1,4 @@
-# lcut (Link Cut)
+# LCut (Link Cut)
 simple link shortener in python and flask
 
-# start
-flask --app main run 
+# [Documentation](github.com/cutplane1/lcut/docs)
