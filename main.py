@@ -12,8 +12,16 @@ def write(db):
 
 db = load()
 
-print(db)
 
-# db.append({"file_path": "C:\\folder\\pic.png", "tags": ["cat", "kot"]})
 
-# write()
+# def search_link(db, key):
+#     return db[key]
+
+
+# search_link(db, "oneb")
+def append(db, key, link):
+    db[key] = link
+
+append(db, "ttb", "ntsft.com")
+
+write(db)
