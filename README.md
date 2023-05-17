@@ -2,7 +2,7 @@
 
 Simple link shortener in python and flask.
 
-## Start app
+## Start App
 
 ```
 flask --app main run
@@ -26,7 +26,7 @@ URL = "127.0.0.1:5000"
 import database, linkgen, config
 
 # get json file
-db = database.load(config.database_file)
+db = database.load(config.DATABASE_FILE)
 
 # search link in db
 print(database.search_link(db, "Ax2Ui3"))
@@ -35,7 +35,7 @@ print(database.search_link(db, "Ax2Ui3"))
 database.append(db, linkgen.generate_random_symbols(8), "example.com")
 
 # save link
-database.write(config.database_file, db)
+database.write(config.DATABASE_FILE, db)
 ```
 
 ## Template Form
