@@ -21,3 +21,9 @@ def save_page():
     database.write(config.DATABASE_FILE, db)
 
     return config.URL + "/" + sym
+
+@app.route("/d", methods=['POST'])
+def dec_link():
+    final_link = decryptor.get_final_link(request.form['link'])
+
+    return f'<a href="{final_link}">{final_link}</a>'
