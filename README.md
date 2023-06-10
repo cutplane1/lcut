@@ -5,7 +5,7 @@ Simple link shortener in python and flask.
 ## Start App
 
 ```
-flask --app main run
+flask --app src/main run
 ```
 
 ## Config
