@@ -1,4 +1,4 @@
-import database, linkgen, config
+import database, linkgen, config, decryptor
 
 from flask import Flask, render_template, redirect, request
 
